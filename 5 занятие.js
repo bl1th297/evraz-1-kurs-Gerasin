@@ -43,3 +43,25 @@ surname2DOM.innerText = surname;
 let middlename = prompt ('Укажите ваше Отчество')
 let middlenameDOM = document.getElementById('middlename');
 middlenameDOM.innerText = middlename;
+let age = prompt ('Укажите ваш возраст')
+let ageDOM = document.getElementById('age');
+ageDOM.innerText = age;
+let school = prompt ('Укажите номер школы')
+let schoolDOM = document.getElementById('school');
+schoolDOM.innerText = school;
+let sport = prompt ('Укажите ваш любимый спорт')
+let sportDOM = document.getElementById('sport');
+sportDOM.innerText = sport;
+let subject = prompt ('Укажите ваш любимый предмет')
+let subjectDOM = document.getElementById('subject');
+subjectDOM.innerText = subject;
+let color = prompt ('Укажите цвет')
+let colorDOM = document.getElementById('color');
+colorDOM.innerText = color;
+let class23 = prompt('Укажите ваше имя')
+let classDOM = document.getElementById('class');
+classDOM.innerText = class23;
+function clearDiv () {
+    let div = document.getElementById('clear');
+
+}
