@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link
+    rel="stylesheet"
+    href=zadanie%208.js
+</head>
+<body id="sdf">
+<button onclick="clearDiv()">Очистить div</button>
+<button onclick="makeRed()">Изменить цвет фона на красный</button>
+<script>
+  let result = document.getElementById("GFG");
+
+  function changeColor(color) {
+    document.body.style.background = color;
+  }
+
+  function myFunc() {
+    changeColor('yellow');
+    result.innerHTML = "Background Color changed";
+  }
+</script>
+<button onclick="makeBlue()">Изменить цвет фона на синий</button>
+<button onclick="makeGreen()">Изменить цвет фона на зеленый</button>
+<script src="7%20занятие.js"></script>
+</body>
+</html>

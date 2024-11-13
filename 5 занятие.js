@@ -63,5 +63,5 @@ let classDOM = document.getElementById('class');
 classDOM.innerText = class23;
 function clearDiv () {
     let div = document.getElementById('clear');
-
+    div.innerText = ''
 }
