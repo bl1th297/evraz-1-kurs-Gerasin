@@ -1,11 +1,8 @@
 function makeRed() {
-let color1 = document.getElementById('red');
+    let red = document.getElementById('red');
+    body.style.backgroundColor = 'red';
+}
+function makeBlue(){
     }
-
-function makeBlue() {
-    let color2 = document.getElementById('blue');
-}
-
-function makeGreen() {
-    let color3 = document.getElementById('green');
-}
+function makeGreen(){
+    }

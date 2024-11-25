@@ -4,26 +4,16 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link
-    rel="stylesheet"
-    href=zadanie%208.js
+          rel="stylesheet"
+          href="css.css"
+  >
 </head>
 <body id="sdf">
-<button onclick="clearDiv()">Очистить div</button>
-<button onclick="makeRed()">Изменить цвет фона на красный</button>
-<script>
-  let result = document.getElementById("GFG");
+<label><input type="radio" name="background" </button onclick="document.body.style.background = 'red'"> Красный</label>
 
-  function changeColor(color) {
-    document.body.style.background = color;
-  }
+<label><input type="radio" name="background" onclick="document.body.style.background = 'blue'"> Синий</label>
 
-  function myFunc() {
-    changeColor('yellow');
-    result.innerHTML = "Background Color changed";
-  }
-</script>
-<button onclick="makeBlue()">Изменить цвет фона на синий</button>
-<button onclick="makeGreen()">Изменить цвет фона на зеленый</button>
-<script src="7%20занятие.js"></script>
+<label><input type="radio" name="background" onclick="document.body.style.background = 'green'"> Зелёный</label>
+<script src="js.js"></script>
 </body>
 </html>
