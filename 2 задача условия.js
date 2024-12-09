@@ -1,9 +1,15 @@
-document.getElementById('input').value;
-function checkInput(){
-    if (input$2 !== 0 );
-    document.getElementById (result().innerText = 'Введённое число чётное'
-}
-else{
-    document.getElementById(result().innerText = 'Введённое число нечётное'
 
+
+function checkInput() {
+    let span = document.getElementById('input');
+    let input = document.getElementById('input1').value;
+    input = +input;
+
+    if (input%2 !== 0) {
+        span.innerText = 'Введённое число чётное'
+    }
+    else {
+        (input%2 !== 1)
+        span.innerText = 'Введённое число нечётное'
+    }
 }
