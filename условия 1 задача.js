@@ -1,82 +1,102 @@
-let number = 0
-function function1() {
-    number = 0
-    if (number == '0'){
-        MakeBlack()
-    }
-}
-function function2() {
-    number = 1
-    if (number == '1') {
-        MakeWhite()
-    }
-}
-function function3() {
-    number = 2
-    if (number == '2') {
-        MakeBlue()
-    }
-}
-function function4() {
-    number = 5
-    if (number == '5') {
-        MakeRed()
-    }
-}
-function function5() {
-    number = number + 1
-    if (number !== '0') {
-        MakeRed();
-    }
-    else{
-        MakeGold();
-    }
-}
-function function6() {
-    number = number - 1
-    if (number !== '0') {
-        MakeGold();
-    }
-        else{
-        MakeRed();
-    }
-}
-function MakeBlack(){
-    backgroundcolor = 'black';
+let result = document.getElementById('total');
+let number = 0;
+let number1 = 0;
+
+
+function MakeBlack() {
     let element = document.getElementById("body");
     element.style.backgroundColor = "black"; // Изменяем цвет фона
     element.style.color = "white"; // Изменяем цвет текста
 }
-function MakeWhite(){
-    backgroundcolor = 'white';
+
+function MakeWhite() {
     let element = document.getElementById("body");
     element.style.backgroundColor = "white"; // Изменяем цвет фона
     element.style.color = "black"; // Изменяем цвет текста
 }
-function MakeBlue(){
-    backgroundcolor = 'blue';
-    let  element = document.getElementById("body");
+
+function MakeBlue() {
+    let element = document.getElementById("body");
     element.style.backgroundColor = "blue"; // Изменяем цвет фона
     element.style.color = "white"; // Изменяем цвет текста
 }
-function MakeGreen(){
-    backgroundcolor = 'green';
-    let  element = document.getElementById("body");
+
+function MakeGreen() {
+    let element = document.getElementById("body");
     element.style.backgroundColor = "green"; // Изменяем цвет фона
     element.style.color = "white"; // Изменяем цвет текста
 }
-function MakeRed(){
-    backgroundcolor = 'red';
-    let  element = document.getElementById("body");
+
+function MakeRed() {
+    let element = document.getElementById("body");
     element.style.backgroundColor = "red"; // Изменяем цвет фона
     element.style.color = "black"; // Изменяем цвет текста
 }
+
 function MakeGold() {
-    backgroundcolor = 'gold';
     let element = document.getElementById("body");
     element.style.backgroundColor = "gold"; // Изменяем цвет фона
     element.style.color = "black"; // Изменяем цвет текста
 }
-function innerText (){
 
+function function1() {
+    number = 0
+    MakeBlack()
+    result.innerText = number
+}
+
+function function2() {
+    number = 1
+    MakeWhite()
+    result.innerText = number
+}
+
+function function3() {
+    number = 2
+    MakeBlue()
+    result.innerText = number
+}
+
+function function4() {
+    number = 5
+    MakeGreen()
+    result.innerText = number
+}
+
+function function5() {
+    number = number + 1
+    result.innerText = number
+
+    if (number === 0) {
+        MakeBlack()
+    } else if (number === 1) {
+        MakeWhite()
+    } else if (number === 2) {
+        MakeBlue()
+    } else if (number === 5) {
+        MakeGreen()
+    } else if (number % 2 === 0) {
+        MakeRed();
+    } else {
+        MakeGold();
+    }
+}
+
+function function6() {
+    number = number - 1
+    result.innerText = number
+
+    if (number === 0) {
+        MakeBlack()
+    } else if (number === 1) {
+        MakeWhite()
+    } else if (number === 2) {
+        MakeBlue()
+    } else if (number === 5) {
+        MakeGreen()
+    } else if (number % 2 === 0) {
+        MakeRed();
+    } else {
+        MakeGold();
+    }
 }
