@@ -7,20 +7,24 @@ let b = "*";
 let c = "/";
 let d = "-";
 let answer = '';
+
 function checkInput() {
     if (input2.value === a) {
         answer = +input1.value + +input3.value;
-    } else if (input2.value === b){
+    }
+    else if (input2.value === b) {
         answer = +input1.value * +input3.value;
-    } else if (input2.value === c){
+    }
+    else if (input2.value === c) {
         answer = +input1.value / +input3.value;
-    } else if (input2.value === d){
+    }
+    else if (input2.value === d) {
         answer = +input1.value - +input3.value;
     }
-   else {
+    else {
         answer = "хз"
     }
-result.innerText = answer
+    result.innerText = answer
 }
 
 

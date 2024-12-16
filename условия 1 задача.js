@@ -69,15 +69,20 @@ function function5() {
 
     if (number === 0) {
         MakeBlack()
-    } else if (number === 1) {
+    }
+    else if (number === 1) {
         MakeWhite()
-    } else if (number === 2) {
+    }
+    else if (number === 2) {
         MakeBlue()
-    } else if (number === 5) {
+    }
+    else if (number === 5) {
         MakeGreen()
-    } else if (number % 2 === 0) {
+    }
+    else if (number % 2 === 0) {
         MakeRed();
-    } else {
+    }
+    else {
         MakeGold();
     }
 }
@@ -88,15 +93,20 @@ function function6() {
 
     if (number === 0) {
         MakeBlack()
-    } else if (number === 1) {
+    }
+    else if (number === 1) {
         MakeWhite()
-    } else if (number === 2) {
+    }
+    else if (number === 2) {
         MakeBlue()
-    } else if (number === 5) {
+    }
+    else if (number === 5) {
         MakeGreen()
-    } else if (number % 2 === 0) {
+    }
+    else if (number % 2 === 0) {
         MakeRed();
-    } else {
+    }
+    else {
         MakeGold();
     }
 }
