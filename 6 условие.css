@@ -22,3 +22,26 @@
     bottom: 550px;
     Left: 360px;
 }
+.divrectange {
+    width: 800px;   height: 500px; /* Размеры */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+    position: unset;
+}
+.Right {
+
+    border-right-color:darkred
+}
+.Left {
+
+    border-left-color:darkred
+
+}.Down {
+
+     border-down-color:darkred
+
+ }.Height {
+
+      border-hieght-color:darkred
+  }
