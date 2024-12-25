@@ -3,31 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link
+            rel="stylesheet"
+            href="контрольная_решаем_вместе.css"
+    >
 </head>
-
 <body id="body">
-<div id="divinp1">
-<div><button onclick="MakeWhite()"> фон чёрный, цвет текста белый</button></div>
-<div><button onclick="MakeBlack()">фон белый, цвет текста чёрный</button></div>
-<div><button onclick="MakeGold()">фон Goldenrod, цвет текста черный</button></div>
-    <div><button onclick="MakeGreen()">фон зелёный, цвет текста черный</button></div>
-    <div><button onclick="MakeBlue()">фон синий, цвет текста зелёно-жёлтый</button></div>
-</div>
-
 
 <div>
-    <div><span id="input"></span></div>
-    <span><button onclick="min10()">уменьшить на 10</button></span>
-    <span><button onclick="min1()">уменьшить на 1</button></span>
-    <span><button onclick="plus1()">увеличить на 1</button></span>
-    <span><button onclick="plus10()">увеличить на 10</button></span>
-    </div>
+    <button onclick="" style="background-color: white; color: black;">Фон белый, текст черный, кнопки белые с черным текстом</button>
 </div>
 <div>
-<div>ТЕКУЩЕЕ ЗНАЧЕНИЕ:</div><div = id"prompt"
+    <button onclick="" style="background-color: black; color: #fff;">Фон черный, текст белый, кнопки серые с черным текстом</button>
 </div>
-<div>Число чётное:</div>
+<div>
+    <button onclick="" style="background-color: grey; color: black;">Фон серый, текст черный, кнопки черные с белым текстом</button>
+</div>
+<div>
+    <button onclick="" style="background-color: goldenrod; color: black;">Фон goldenrod, текст черный, кнопки darkblue с greenyellow текстом</button>
+</div>
+<div>
+    <button onclick="" style="background-color: darkblue; color: greenyellow;">Фон darkblue, текст greenyellow, кнопки goldenrod с черным текстом</button>
+</div>
+<br>
+<div>
+    <button onclick="minus10" id ="" >Уменьшить на 10</button>
+    <button onclick="minus1">Уменьшить на 1</button>
+    <button onclick="plus1">Увеличить на 1</button>
+    <button onclick="plus10">Увеличить на 10</button>
+</div>
 
+<div class="total">
+    Текущее число: <span id="total">0</span>
+    <button onclick="">Изменить число на своё</button>
+</div>
+<br>
+<div>Число четное: <span id="even">-</span></div>
+<div>Число делится на 3 без остатка: <span id="three">-</span></div>
+<div>Число делится на 5 без остатка: <span id="five">-</span></div>
+<div>Число делится на 7 без остатка: <span id="seven">-</span></div>
+
+<br>
+<div style="border-top: 1px solid grey;">История четных чисел:</div>
+<div id="history_even"></div>
+<br>
+<div style="border-top: 1px solid grey;">История чисел, делящихся на 3 без остатка:</div>
+<div id="history_three"></div>
+<br>
+<div style="border-top: 1px solid grey;">История чисел, делящихся на 5 без остатка:</div>
+<div id="history_five"></div>
+<br>
+<div style="border-top: 1px solid grey;">История чисел, делящихся на 7 без остатка:</div>
+<div id="history_seven"></div>
+<br>
+<div style="border-top: 1px solid grey;">История остальных чисел:</div>
+<div id="history"></div>
 
 <script src="2_самостоятельная.js"></script>
 </body>
