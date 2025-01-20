@@ -18,6 +18,7 @@ body {
 .head-top-links {
     display: flex;
     flex-direction: row;
+    font-size: 15px;
 }
 
 .head-top-links .link {
@@ -31,6 +32,15 @@ body {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    border-style: solid;
+    border-color-bottom: orange;
+}
+
+
 .head-bottom {
     flex: 1 1 auto;
     display: flex;
@@ -38,5 +48,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('slider_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
