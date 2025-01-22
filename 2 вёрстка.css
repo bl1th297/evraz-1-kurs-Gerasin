@@ -1,0 +1,18 @@
+.head-top-logo {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 355px 355px;
+    background-position: center
+}
+
+.head-top-links.link {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs14Vu9acoTXx91ic1ZVeXwQHiCTcZ8Qqlsw&s);
+    background-repeat: no-repeat;
+    background-size: 355px 355px;
+    background-position: center;
+}
