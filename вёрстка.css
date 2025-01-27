@@ -69,17 +69,20 @@ body {
 
 
 }
-.head-two-bottom-top {
+.head-two-top {
     font-size: 40px;
     display: flex;
     align-items: center;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbSoYZ3ogGB1ukjG1h3VNBcEGvkPnFD1SZQ&s);
     background-repeat: no-repeat;
-    background-size: 355px 355px;
+    background-size: 100%;
     background-position: center;
-
+    padding: 0 100px;
+    justify-content: center;
 }
-
+.head-two-history{
+    background-image:;
+}
 
 
 
