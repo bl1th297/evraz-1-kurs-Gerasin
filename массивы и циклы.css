@@ -1,0 +1,15 @@
+.green{
+    color:green;
+}
+.red{
+    color:red;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+body > div {
+    width: 50%;
+}

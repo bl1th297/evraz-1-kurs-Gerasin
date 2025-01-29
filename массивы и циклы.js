@@ -27,20 +27,20 @@
 //function addLi() {
 //    let addElement = document.getElementById('add');
 //    let input = document.getElementById('name')
-        //    let liElement = document.createElement('li');
+//    let liElement = document.createElement('li');
 //
 //    if (input.value === '') {
 //        alert('Добавь значение')
-            //    }
+//    }
 //    else {
 //        liElement.innerText = input.value;
 //
 //        if (+input.value % 2 === 0) {
 //            liElement.classList.add('chet')
-                //        }
+//        }
 //        else {
 //            liElement.classList.add('nechet')
-                //        }
+//        }
 //
 //        addElement.append(liElement);
 //
@@ -49,28 +49,34 @@
 //}
 function addLi() {
     let addElement = document.getElementById('add');
-    let input = document.getElementById('name')
+    let input = document.getElementById('inp1')
     let liElement = document.createElement('li');
 
     if (input.value === '') {
-        alert('Добавь имя')
+        alert('Добавь значение')
     }
-
-
+    else {
+        liElement.innerText = input.value;
+        liElement.classList.add('green');
         addElement.append(liElement);
 
         input.value = '';
     }
 }
-function addLi2(){
-    let addElement = document.getElementById('add');
-    let input = document.getElementById('name')
+
+function addLi2() {
+    let addElement2 = document.getElementById('add2');
+    let input = document.getElementById('inp2');
     let liElement = document.createElement('li');
 
     if (input.value === '') {
-        alert('Добавь имя')
+        alert('Добавь город')
+    }
 
-        addElement.append(liElement);
+    else {
+        liElement.innerText = input.value;
+        liElement.classList.add('red');
+        addElement2.append(liElement);
 
         input.value = '';
     }

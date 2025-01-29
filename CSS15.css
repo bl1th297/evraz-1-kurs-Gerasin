@@ -1,0 +1,13 @@
+if (input.value === '' || isNaN(count) || count < 1) {
+alert('Убедитесь, что значение названия не пустое и количество больше 0');
+} else {
+      for (let i = 0; i < count; i++) {
+      let liElement = document.createElement('li');
+      liElement.innerText = input.value;
+      liElement.classList.add('green');
+      addElement.append(liElement);
+  }
+      input.value = '';
+      document.getElementById('count').value = '';
+
+  }
