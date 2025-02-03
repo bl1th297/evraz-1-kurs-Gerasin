@@ -1,55 +1,56 @@
 function addLi() {
     let addElement = document.getElementById('add');
-    let input = document.getElementById('inp1')
+    let inputName = document.getElementById('inp1')
+    let inputCount = document.getElementById('inp3')
     let liElement = document.createElement('li');
 
-    if (input.value === '') {
-        alert('Добавь значение')
+    if (inputName.value === '') {
+        alert('Добавь имя')
     }
     else {
-        liElement.innerText = input.value;
-        liElement.classList.add('green');
-        addElement.append(liElement);
-
-        if (input.value === '' || isNaN(count) || count < 1) {
-            alert('Убедитесь, что значение названия не пустое и количество больше 0');
+        if (inputCount.value === '') {
+            alert('Добавь количество повторов имен')
         }
         else {
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i < +inputCount.value; i++) {
                 let liElement = document.createElement('li');
-                liElement.innerText = input.value;
+                liElement.innerText = inputName.value;
                 liElement.classList.add('green');
                 addElement.append(liElement);
             }
-            input.value = '';
-            document.getElementById('count').value = '';
 
+            inputName.value = '';
+            inputCount.value = '';
         }
-
-
-        input.value = '';
-
     }
 }
 
 function addLi2() {
-    let addElement2 = document.getElementById('add2');
-    let input = document.getElementById('inp2');
+    let addElement = document.getElementById('add2');
+    let inputCity = document.getElementById('inp2')
+    let inputCount = document.getElementById('inp4')
     let liElement = document.createElement('li');
 
-    if (input.value === '') {
+    if (inputCity.value === '') {
         alert('Добавь город')
     }
-
     else {
-        liElement.innerText = input.value;
-        liElement.classList.add('red');
-        addElement2.append(liElement);
+        if (inputCount.value === '') {
+            alert('Добавь количество повторов городов')
+        }
+        else {
+            for (let i = 0; i < +inputCount.value; i++) {
+                let liElement = document.createElement('li');
+                liElement.innerText = inputCity.value;
+                liElement.classList.add('red');
+                addElement.append(liElement);
+            }
 
-        input.value = '';
+            inputCity.value = '';
+            inputCount.value = '';
+        }
     }
 }
-
 
 
 
