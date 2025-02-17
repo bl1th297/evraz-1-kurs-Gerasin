@@ -1,8 +1,7 @@
-
 let list = [];
 
 // функция добавления значения из инпута в массив и див
-function add() {
+function add2() {
     let addDiv = document.getElementById('ad');
     let input = document.getElementById('aa');
 
@@ -15,28 +14,41 @@ function add() {
     addDiv.innerText = list;
 }
 
-// функция добавления значения из инпута в массив и див
-function add2() {
-    let ol = document.getElementById('tt');
-    let input = document.getElementById('aa');
-
-    // добавить значение в конец массива list
-    list.push(input.value)
-
-    console.log('длина массива', list.length);
-    console.log(list);
-
-    let liElement = document.createElement('li');
-    liElement.innerText = input.value;
-    ol.append(liElement)
-}
 
 function addList() {
     let ol = document.getElementById('tt');
-    // цикл для вывода всех значений
+    let liElement = document.getElementById('aa');
+
     for (let i = 0; i < list.length; i++) {
         let liElement = document.createElement('li');
         liElement.innerText = list[i];
+        console.log(list[i])
+
         ol.append(liElement)
     }
+}
+
+
+function Liadd1() {
+    let ul = document.getElementById('gg');
+    let liElement = document.getElementById('aa');
+
+    for (let i = 0; i < list.length; i++) {
+
+        let liElement = document.createElement('li');
+        liElement.innerText = list[i];
+
+        ul.append(liElement)
+    }
+}
+
+function const234() {
+
+        console.log('вызываем очистку дива');
+        // получаем див для очистки
+        let clear = document.getElementById('ad');
+        // чистим всё то, что внутри
+        clear.innerText = '';
+
+
 }
