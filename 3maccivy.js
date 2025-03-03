@@ -48,12 +48,3 @@ window.onload = function () {
         }
     }
 }
-
-
-
-
-
-
-
-
-
