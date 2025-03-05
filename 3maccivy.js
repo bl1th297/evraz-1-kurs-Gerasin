@@ -42,8 +42,8 @@ window.onload = function () {
                     square.className = "square3";
                     container.appendChild(square);
                 }
-                let result = square1 + square2 + square3
-                break; // Завершение цикла
+                result = square1 + square2 + square3
+                break
             }
         }
     }
