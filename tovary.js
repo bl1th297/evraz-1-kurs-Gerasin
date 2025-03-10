@@ -5,7 +5,8 @@ let inputPrice = document.getElementById('price');
 let inputCount = document.getElementById('count');
 let inputDiscount = document.getElementById('discount');
 let inputDescription = document.getElementById('description');
-let selectplace = document.getElementById('place');
+let selectpunkt = document.getElementById('punkt');
+let selectcolor = document.getElementById('color')
 
 let categories = {
     'clothes': 'Одежда',
@@ -13,11 +14,13 @@ let categories = {
     'tools': 'Инструменты',
     'toys': 'Игрушки'
 }
-let place = {
-    'wb': 'Вб',
-    'az': 'азон',
-    'pochta': 'Почта',
-    'house' : 'надом'
+let colors = {
+    'pink': 'розовый',
+    'red': 'красный',
+    'blue': 'синий',
+    'green': 'зелёный',
+    'black': 'чёрный',
+    'white': 'белый'
 }
 
 let specialsObj = {
@@ -38,13 +41,16 @@ function discount(item) {
     }
 }
 
+
 function addTovar() {
     // находим активный радио-инпут, который выбран
     let discountChoose = document.querySelector('input[name=discount]:checked');
+    let payment = document.querySelector('input[name=payment]:checked');
 
     // создаем контейнер для товара
     let cardTovar = document.createElement('div');
     cardTovar.classList.add('tovar');
+
 
     // создаем html наполнение для блока с ценой
     let price = ``;
@@ -57,13 +63,13 @@ function addTovar() {
         price = `<div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">${ inputPrice.value } руб.</div>
-                        <div>${ newPrice } руб.</div>
+                        <div class="tovar-price-old">${inputPrice.value} руб.</div>
+                        <div>${newPrice} руб.</div>
                     </div>
                 </div>`
     }
     else {
-        price = `<div class="tovar-price">Цена: ${ inputPrice.value } руб.</div>`;
+        price = `<div class="tovar-price">Цена: ${inputPrice.value} руб.</div>`;
     }
 
     // достаем все чекбоксы особенностей и генерируем текст
@@ -74,15 +80,19 @@ function addTovar() {
         // console.log(specials[i].value, specialsObj[specials[i].value]);
         specialsText += ' ' + specialsObj[specials[i].value];
     }
-
-    let card = `<div class="tovar-name">${ inputName.value }</div>
-            <div class="tovar-category">${ categories[selectCategory.value] }</div>
-            <div class="tovar-specials">Особенности: ${ specialsText }</div>
-            <div class="tovar-description">${ inputDescription.value }</div>
+    console.log(selectcolor.value)
+    let card = `<div class="tovar-name">${inputName.value}</div>
+            <div class="tovar-category">${categories[selectCategory.value]}</div>
+            <div class="tovar-punkt">Пункт выдачи: ${selectpunkt.value}</div>
+            <div class="tovar-specials">Особенности: ${specialsText}</div>
+            <div class="tovar-color">${colors[selectcolor.value]}</div>
+            <div class="tovar-payment">Способ оплаты: ${payment.value}</div>
+            <div class="tovar-description">${inputDescription.value}</div>
             <div class="tovar-price-count">
-                ${ price }
-                <div class="count">Количество: ${ inputCount.value } шт.</div>
+                ${price}
+                <div class="count">Количество: ${inputCount.value} шт.</div>
             </div>
+           
             <div class="tovar-close">X</div>`
 
     cardTovar.innerHTML = card;

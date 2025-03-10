@@ -8,6 +8,7 @@
             display: flex;
             flex-direction: row;
         }
+
         body > div {
             width: 50%;
         }
@@ -104,14 +105,15 @@
         </select>
     </div>
     <div class="item">
-        <div>Пункт выдачи</div>
-        <select id="place">
-            <option selected disabled>Не выбрано</option>
-            <option value="wb">Вб</option>
-            <option value="az">Азон</option>
-            <option value="pochta">Почта</option>
-            <option value="house">Надом</option>
-        </select>
+        <div class="item">
+            <div>Пункт выдачи</div>
+            <textarea
+                    name=""
+                    id="punkt"
+                    cols="10"
+                    rows="5"
+            ></textarea>
+        </div>
     </div>
     <div class="item">
         <div>Стоимость</div>
@@ -122,50 +124,74 @@
         <div>Количество</div>
         <input type="number" value="0" id="count">
     </div>
-
     <div class="item">
-        <div>Есть скидка?</div>
+    <div>цвет</div>
+    <select id="color">
+        <option selected disabled>Не выбрано</option>
+        <option value="pink">розовый</option>
+        <option value="red">красный</option>
+        <option value="blue">синий</option>
+        <option value="green">зелёный</option>
+        <option value="black">чёрный</option>
+        <option value="white">белый</option>
+    </select>
+</div>
 
-        <div>
-            <input type="radio" id="yes" name="discount" value="true" onclick="discount(true)">
-            <label for="yes">Да</label>
+<div class="item">
+    <div>Оплата</div>
+    <div>
+        <input type="radio" id="nal" name="payment" value="Нал">
+        <label for="nal">Нал</label>
 
-            <input type="radio" id="no" name="discount" value="false" checked onclick="discount(false)">
-            <label for="no">Нет</label>
-        </div>
+        <input type="radio" id="card" name="payment" value="Карта" checked>
+        <label for="card">Карта</label>
     </div>
+</div>
 
-    <div class="item" id="discountDom">
-        <div>Скидка, %</div>
-        <input type="number" value="0" id="discount">
+
+<div class="item">
+    <div>Есть скидка?</div>
+
+    <div>
+        <input type="radio" id="yes" name="discount" value="true" onclick="discount(true)">
+        <label for="yes">Да</label>
+
+        <input type="radio" id="no" name="discount" value="false" checked onclick="discount(false)">
+        <label for="no">Нет</label>
     </div>
+</div>
 
-    <div class="item">
-        <div>Особенности</div>
+<div class="item" id="discountDom">
+    <div>Скидка, %</div>
+    <input type="number" value="0" id="discount">
+</div>
 
-        <div>
-            <input type="checkbox" id="bu" name="specials" value="bu">
-            <label for="bu">Б/У</label>
-        </div>
-        <div>
-            <input type="checkbox" id="fragile" name="specials" value="fragile">
-            <label for="fragile">Хрупкий</label>
-        </div>
+<div class="item">
+    <div>Особенности</div>
+
+    <div>
+        <input type="checkbox" id="bu" name="specials" value="bu">
+        <label for="bu">Б/У</label>
     </div>
-
-    <div class="item">
-        <div>Описание</div>
-        <textarea
-                name=""
-                id="description"
-                cols="10"
-                rows="5"
-        ></textarea>
+    <div>
+        <input type="checkbox" id="fragile" name="specials" value="fragile">
+        <label for="fragile">Хрупкий</label>
     </div>
+</div>
 
-    <div class="item">
-        <button onclick="addTovar()">Добавить товар</button>
-    </div>
+<div class="item">
+    <div>Описание</div>
+    <textarea
+            name=""
+            id="description"
+            cols="10"
+            rows="5"
+    ></textarea>
+</div>
+
+<div class="item">
+    <button onclick="addTovar()">Добавить товар</button>
+</div>
 </div>
 <div class="tovary">
     <h3>Товары</h3>
@@ -174,12 +200,12 @@
         <div class="tovar">
             <div class="tovar-name">Название</div>
             <div class="tovar-category">Категории</div>
-            <div class="tovar-specials">Особенности: </div>
+            <div class="tovar-specials">Особенности:</div>
             <div class="tovar-description">Описание</div>
             <div class="tovar-price-count">
                 <!--<div class="tovar-price">Цена: 1000 руб.</div>-->
                 <div class="tovar-price">
-                    <div>Цена: </div>
+                    <div>Цена:</div>
                     <div>
                         <div class="tovar-price-old">1000 руб.</div>
                         <div>1000 руб.</div>
