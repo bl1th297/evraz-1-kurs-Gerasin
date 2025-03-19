@@ -117,10 +117,10 @@ function addTovarCard(tovar, index) {
 
     let card = `<div class="tovar-name">${ tovar.name }</div>
             <div class="tovar-category">${ categories[tovar.category] }</div>
-            <div class="tovar-punkt">Пункт выдачи: ${selectpunkt.value}</div>
+            <div class="tovar-punkt">Пункт выдачи: ${tovar.punkt}</div>
             <div class="tovar-specials">Особенности: ${specialsText }</div>
-            <div class="tovar-color">${colors[selectcolor.value]}</div>
-            <div class="tovar-payment">Способ оплаты: ${payment.value}</div>
+            <div class="tovar-color">Цвет: ${colors[tovar.color]}</div>
+            <div class="tovar-payment">Способ оплаты: ${tovar.payment}</div>
             <div class="tovar-description">${ tovar.description }</div>
             <div class="tovar-price-count">
                 ${ price }
@@ -136,7 +136,11 @@ function addTovarCard(tovar, index) {
 
     form.reset();
 }
+function Delete(button) {
+    let product = button.parentElement.parentElement;//возвращает родителя
 
+    product.remove();
+}
 // редактирование товара, открытие свойств товара в форме товара
 function edit(productIndex) {
     currentEditProduct = productIndex;
