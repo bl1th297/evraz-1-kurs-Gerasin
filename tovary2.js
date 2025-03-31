@@ -20,8 +20,8 @@ let currentEditProduct = null;
 
 let categories = {
     'clothes': 'Одежда',
-    'shoes':   'Обувь',
-    'tools':   'Инструменты',
+    'shoes': 'Обувь',
+    'tools': 'Инструменты',
 }
 let colors = {
     'pink': 'розовый',
@@ -33,7 +33,7 @@ let colors = {
 }
 
 let specialsObj = {
-    'bu':      'Б/У',
+    'bu': 'Б/У',
     'fragile': 'Хрупкое',
 };
 
@@ -57,7 +57,6 @@ function addTovar() {
     let payment = document.querySelector('input[name=payment]:checked');
 
 
-
     let specialsValues = [];
     let specials = document.querySelectorAll('input[name=specials]:checked');
 
@@ -66,17 +65,17 @@ function addTovar() {
     }
 
     let product = {
-        name:           inputName.value,
-        category:       selectCategory.value,
-        punkt:          selectpunkt.value,
-        specials:       specialsValues,
-        description:    inputDescription.value,
-        color:          selectcolor.value,
-        payment:        payment.value,
+        name: inputName.value,
+        category: selectCategory.value,
+        punkt: selectpunkt.value,
+        specials: specialsValues,
+        description: inputDescription.value,
+        color: selectcolor.value,
+        payment: payment.value,
         discountChoose: discountChoose.value,
-        discount:       inputDiscount.value,
-        price:          inputPrice.value,
-        count:          inputCount.value,
+        discount: inputDiscount.value,
+        price: inputPrice.value,
+        count: inputCount.value,
     };
     let productIndex = products.push(product) - 1;
 
@@ -99,13 +98,13 @@ function addTovarCard(tovar, index) {
         price = `<div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">${ tovar.price } руб.</div>
-                        <div>${ newPrice } руб.</div>
+                        <div class="tovar-price-old">${tovar.price} руб.</div>
+                        <div>${newPrice} руб.</div>
                     </div>
                 </div>`;
     }
     else {
-        price = `<div class="tovar-price">Цена: ${ tovar.price } руб.</div>`;
+        price = `<div class="tovar-price">Цена: ${tovar.price} руб.</div>`;
     }
 
     // достаем все чекбоксы особенностей и генерируем текст
@@ -115,32 +114,30 @@ function addTovarCard(tovar, index) {
         specialsText += ' ' + specialsObj[tovar.specials[i]];
     }
 
-    let card = `<div class="tovar-name">${ tovar.name }</div>
-            <div class="tovar-category">${ categories[tovar.category] }</div>
+    let card = `<div class="tovar-name">${tovar.name}</div>
+            <div class="tovar-category">${categories[tovar.category]}</div>
             <div class="tovar-punkt">Пункт выдачи: ${tovar.punkt}</div>
-            <div class="tovar-specials">Особенности: ${specialsText }</div>
+            <div class="tovar-specials">Особенности: ${specialsText}</div>
             <div class="tovar-color">Цвет: ${colors[tovar.color]}</div>
             <div class="tovar-payment">Способ оплаты: ${tovar.payment}</div>
-            <div class="tovar-description">${ tovar.description }</div>
+            <div class="tovar-description">${tovar.description}</div>
             <div class="tovar-price-count">
-                ${ price }
-                <div class="count">Количество: ${ tovar.count } шт.</div>
+                ${price}
+                <div class="count">Количество: ${tovar.count} шт.</div>
             </div>
-            <div class="tovar-close">X</div>
+            <div><button onclick="Delete(${index})" class="tovar-close">X</button></div>
             <div class="tovar-edit">
-                <button onclick="edit(${ index })">Редактировать</button>
+                <button onclick="edit(${index})">Редактировать</button>
             </div>`;
 
     cardTovar.innerHTML = card;
     listDOM.append(cardTovar);
 
     form.reset();
-}
-function Delete(button) {
-    let product = button.parentElement.parentElement;//возвращает родителя
 
-    product.remove();
+
 }
+
 // редактирование товара, открытие свойств товара в форме товара
 function edit(productIndex) {
     currentEditProduct = productIndex;
@@ -159,7 +156,7 @@ function edit(productIndex) {
     selectcolor.value = product.color;
     selectpunkt.value = product.punkt;
     // ищем нужный инпут радио с нужным value значением, чтобы его отметить как выбранный
-    let radio = document.querySelector(`input[name=discount][value=${ product.discountChoose }]`);
+    let radio = document.querySelector(`input[name=discount][value=${product.discountChoose}]`);
     if (radio) {
         radio.checked = true;
     }
@@ -167,7 +164,7 @@ function edit(productIndex) {
     for (let i = 0; i < product.specials.length; i++) {
         // ищем нужный инпут чекбокс с нужным value значением, чтобы его отметить как выбранный
         let specialValue = product.specials[i];
-        let checkbox = document.querySelector(`input[name=specials][value=${ specialValue }]`);
+        let checkbox = document.querySelector(`input[name=specials][value=${specialValue}]`);
         if (checkbox) {
             checkbox.checked = true;
         }
@@ -210,7 +207,9 @@ function editTovar() {
     form.reset();
 
     buildAgain();
+
 }
+
 
 // полностью очищаем список продуктов и строим его заново, вызывая функцию построения карточки товара
 function buildAgain() {
@@ -221,3 +220,20 @@ function buildAgain() {
         addTovarCard(product, i)
     }
 }
+
+// Функция для удаления товара по индексу
+function Delete(productIndex) {
+    // Проверяем, существует ли товар с данным индексом
+    if (productIndex >= 0 && productIndex < products.length) {
+        // Удаляем товар из массива
+        products.splice(productIndex, 1);
+        console.log(`Товар с индексом ${productIndex} удален.`);
+    }
+    else {
+        console.log(`Товар с индексом ${productIndex} не найден.`);
+    }
+
+    // Обновляем отображение списка товаров после удаления
+    buildAgain();
+}
+
