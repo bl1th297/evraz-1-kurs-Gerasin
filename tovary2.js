@@ -236,4 +236,7 @@ function Delete(productIndex) {
     // Обновляем отображение списка товаров после удаления
     buildAgain();
 }
+//localStorage.setItem('products', JSON.stringify(['😂', '🍌', '🍒','🤣','❤','🙌','🎁','🎂','😃','🐱‍👤']));
+
+//let products = JSON.parse(localStorage.getItem('products'));
 
